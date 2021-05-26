@@ -33,7 +33,7 @@ router.get('/login', function(req, res, next) {
     "name":req.query.name,
     "password":req.query.password,
 };
-var selectSQL = "select account,password from user where account = '"+req.query.account+"' and password = '"+req.query.password+"'";
+var selectSQL = "select account,password from user where  = '"+req.query.account+"' and password = '"+req.query.password+"'";
 //var selectSQL = "select password from user where account='"+req.query.account+"'";
 var  addSqlParams = [req.query.account,req.query.password];
    connection.query(selectSQL,function (err, result) {
